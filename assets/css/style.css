@@ -19,6 +19,11 @@
   .as_banner_detail {
       
     height: auto;
+   
+  }
+  .as_banner_slider{
+    position: fixed;   /* Element remains fixed in place as you scroll */
+    bottom: 100px;  
   }
   .slick-slide{
     height: auto;
