@@ -19,6 +19,10 @@
   .as_banner_detail {
       
     height: auto;
+   
+  }
+  .col-sm-12 {
+    margin-top: -100px;
   }
   .slick-slide{
     height: auto;
@@ -172,7 +176,9 @@ a:visited {
 .as_font14 {
   font-size: 16px;
   line-height: 26px;
+  /* padding: 0 0 10px; */
 }
+
 .as_toggle {
   display: none;
 }
