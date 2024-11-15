@@ -699,6 +699,8 @@ a:visited {
   padding-top: 5px;
   display: flex;
 }
+
+
 .as_cart_box .as_cart_btn button {
   background-color: var(--dark-color1);
   padding: 0 5px;
@@ -4079,4 +4081,45 @@ form.d_block {
   .as_info_box .as_icon {
     width: 50px;
   }
+}
+/* Default button styles */
+.btn {
+  font-size: 14px;  /* Default font size */
+  padding: 8px 16px;  /* Default padding */
+  width: auto;
+  max-width: 200px; /* Prevent buttons from growing too large */
+  text-align: center;
+  /* border: #1cb71c solid 5px; */
+  margin-right: 400px;
+  position: relative;
+  right:95px;
+  
+  margin: 0 auto;  /* Center horizontally */
+}
+
+/* For smaller screens (mobile view) */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 12px;  /* Smaller font size for mobile */
+    padding: 6px 12px;  /* Reduced padding */
+    max-width: 150px;  /* Limit max-width to prevent buttons from becoming too large */
+    width: auto;  /* Button adjusts according to content */
+    margin: 10px auto;  /* Center the button horizontally */
+  }
+
+  /* Center buttons on mobile */
+  .d-grid {
+    display: flex;
+    flex-direction: column;  /* Stack buttons vertically */
+    align-items: center;  /* Center buttons horizontally */
+    justify-content: center;  /* Center buttons vertically */
+    gap: 10px;  /* Add space between the buttons */
+  }
+}
+
+/* Flexbox for larger screens */
+.d-md-flex {
+  display: flex;
+  justify-content: flex-end;  /* Right-align buttons on larger screens */
+  align-items: center;  /* Align vertically */
 }
