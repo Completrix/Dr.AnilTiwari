@@ -4090,9 +4090,8 @@ form.d_block {
   max-width: 200px; /* Prevent buttons from growing too large */
   text-align: center;
   /* border: #1cb71c solid 5px; */
-  margin-right: 400px;
-  position: relative;
-  right:95px;
+  /* margin-right: 400px; */
+
   
   margin: 0 auto;  /* Center horizontally */
 }
@@ -4105,6 +4104,8 @@ form.d_block {
     max-width: 150px;  /* Limit max-width to prevent buttons from becoming too large */
     width: auto;  /* Button adjusts according to content */
     margin: 10px auto;  /* Center the button horizontally */
+    position: relative;
+    right:95px;
   }
 
   /* Center buttons on mobile */
