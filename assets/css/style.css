@@ -4094,7 +4094,7 @@ form.d_block {
     width: auto;  /* Button adjusts according to content */
     margin: 10px auto;  /* Center the button horizontally */
     position: relative;
-    right:140px;
+    right:120px;
   }
 
   /* Center buttons on mobile */
