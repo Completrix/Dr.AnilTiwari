@@ -21,6 +21,9 @@ $(document).ready(function(){
       prevArrow: '<button type="button" class="slick-prev as_btn"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8" height="15" viewBox="0 0 8 15"> <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAMAAADu1H4BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAAD8pYtkAAAAIXRSTlMA1ea/6671JJ/9LZA7gUx28linaftidVeLPJczoSy1+sniUnu2AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAE1JREFUCNcly0USwDAMBEE77DA4jPP/T6Zk6dJzWBkTzkZqTBJMyXKxwJViBbXYQCt29EMYwqifE37WWmDV2mDXOnCn1oW/tR5eDfPZHwl7BIGPaP/tAAAAAElFTkSuQmCC" width="8" height="15"/> </svg></span></button>',
       nextArrow: '<button type="button" class="slick-next as_btn"><span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8" height="15" viewBox="0 0 8 15"> <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAMAAADu1H4BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADvEKCAAAAAKHRSTlMAwukcx+QNCdLUAwjfyRbuuyX4qzDhmWw27Iwt/p73uREP2svRBLXYnrw30wAAAAFiS0dEAIgFHUgAAAAJcEhZcwAALiMAAC4jAXilP3YAAABVSURBVAjXJctVEsAwCEXRpC6pu6epvf2vsBPg554ZQEjHFTQe/IAQRogTUqqQ8TIvULKqGg2r7dCzBoA6TphtlxUbfe04bLWCtD0NLjq8YR7C+2nqDzu8BZoG2fHJAAAAAElFTkSuQmCC" width="8" height="15"/> </svg></span></button>'
   });  
+  // ---------------------------------------------------------------
+  
+  // -------------------------------------------------------------------
 
     // product slider
     $('.as_product_slider').slick({
@@ -281,3 +284,34 @@ $(document).ready(function(){
 $(window).on('load',function(){
     $('.as_loader').addClass('hide')
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openChatBtn = document.getElementById("open-chat-btn");
+  const chatbox = document.getElementById("chatbox");
+  const closeBtn = document.getElementById("close-btn");
+  const sendBtn = document.getElementById("send-btn");
+  const messageInput = document.getElementById("message-input");
+  const messages = document.getElementById("messages");
+
+
+
+  // Send a message
+  sendBtn.addEventListener("click", () => {
+    const messageText = messageInput.value.trim();
+    if (messageText) {
+      const userMessage = document.createElement("div");
+      userMessage.textContent = messageText;
+      userMessage.style.alignSelf = "flex-end";
+      userMessage.style.background = "#007bff";
+      userMessage.style.color = "#fff";
+      userMessage.style.padding = "8px";
+      userMessage.style.borderRadius = "8px";
+      userMessage.style.margin = "5px 0";
+
+      messages.appendChild(userMessage);
+      messageInput.value = "";
+
+   
+    }
+  });
+});
